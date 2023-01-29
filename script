@@ -1,0 +1,73 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Ak3_S", "BloodTheme")
+
+ --Main
+ local Tab = Window:NewTab("Trident Survival")
+ local MainSection = Tab:NewSection("MoonHub")
+
+
+ MainSection:NewButton("MoonHub Cracked", "MoonHub cheat aimbot and hitbox patched!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BigHacker123/Moonluck-Open/main/Moonluck%20Cracked"))()
+end)
+
+local MainSection = Tab:NewSection("Yuri X")
+
+
+MainSection:NewButton("Yuri X", "Yuri X cheat ore esp. !", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bank6/yuri-X/main/123", true))()
+end)
+
+
+local Tab = Window:NewTab("Speed race simulator")
+local MainSection = Tab:NewSection("Speed race simulator free pet giver!")
+
+
+MainSection:NewButton("free pet", "Gives free Earth Butterfly!", function()
+    --From This:
+
+local args = {
+    [1] = "",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+
+
+--To This:
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer("Earth Butterfly", false)
+end)
+
+
+MainSection:NewButton("Auto Orb Collector", "AutoOrb Colector that collects orbs for you", function()
+    while wait(0.1) do
+        local orbs = game:GetService("Workspace").GameAssets.GlobalAssets.OrbSpawns
+        for i, v in pairs(orbs:GetChildren()) do
+        if v:IsA("MeshPart") then
+        local user = game.Players.LocalPlayer.Character.Head
+        firetouchinterest(user, v, 0)
+        elseif v:IsA("Model") then
+        local summerOrb = v["Orb.1"]
+        firetouchinterest(game.Players.LocalPlayer.Character.Head, summerOrb, 0)
+        end
+        end
+        end
+end)
+
+
+local Tab = Window:NewTab("Ultimate Tower Defense")
+local MainSection = Tab:NewSection("Ultimate tower Defense")
+
+
+MainSection:NewButton("Auto Fishing", "automatic fishing!", function()
+    -- variable
+local stuff = getrenv()._G.FireNetwork
+local id = game.Players.LocalPlayer.UserId
+ 
+-- hacker stuff
+while true do
+    stuff("PlayerCatchFish", id)
+    wait()
+end
+end)
